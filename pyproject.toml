@@ -1,0 +1,23 @@
+[project]
+name = "continuous-task"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.11.1",
+    "numpy>=2.5.2",
+    "oscillators",
+    "pandas>=3.0.5",
+    "scipy>=1.18.1",
+]
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["common*"]
+
+[tool.uv.sources]
+oscillators = { path = "../oscillators", editable = true }
